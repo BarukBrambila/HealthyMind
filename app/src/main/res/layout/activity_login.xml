@@ -28,7 +28,8 @@
             android:layout_marginVertical="10dp"
             android:layout_marginTop="120dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="40dp"/>
+            app:cardCornerRadius="40dp"
+            android:id="@+id/txtSignUp"/>
 
     </GridLayout>
 
@@ -49,34 +50,36 @@
         android:layout_marginTop="250dp"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:layout_marginLeft="40dp"/>
+        android:layout_marginLeft="35dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter your name of usuario"
+        android:hint="Enter username"
         android:background="@drawable/text_border"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="280dp"/>
+        android:paddingHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="280dp"
+        android:id="@+id/eTxtUserName"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="E-mail"
         android:layout_marginTop="340dp"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:layout_marginLeft="40dp"/>
+        android:layout_marginLeft="35dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter your Email"
+        android:hint="example@example.com"
         android:background="@drawable/text_border"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="370dp"/>
+        android:paddingHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="370dp"
+        android:id="@+id/eTxtMail"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -85,16 +88,17 @@
         android:layout_marginTop="430dp"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:layout_marginLeft="40dp"/>
+        android:layout_marginLeft="35dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="enter your password"
+        android:hint="Enter password"
         android:background="@drawable/text_border"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="460dp"/>
+        android:paddingHorizontal="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="460dp"
+        android:id="@+id/eTxtPassW"/>
 
     <Button
         android:layout_width="250dp"
@@ -102,7 +106,8 @@
         android:layout_marginTop="560dp"
         android:backgroundTint="@color/blue3"
         android:layout_centerHorizontal="true"
-        android:text="Ingresar"/>
+        android:text="Ingresar"
+        android:id="@+id/btnLogin"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -113,7 +118,8 @@
         android:textSize="15dp"
         android:layout_marginRight="10dp"
         android:textStyle="bold"
-        android:textColor="@color/blue3" />
+        android:textColor="@color/blue3"
+        android:id="@+id/forgotP"/>
 
     <TextView
         android:layout_width="match_parent"
