@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue3"
+    tools:context=".seleccioninisesion">
+
+    <ImageView
+        android:id="@+id/toplogo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toplogo"
+        android:rowCount="3">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="367dp"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginVertical="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="40dp" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub1"
+        android:text="¿Eres paciente o especialista?"
+        android:fontFamily="@font/fontbold"
+        android:textColor="@color/blue2"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:layout_below="@id/toplogo"
+        android:layout_marginTop="50dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="135dp"
+        android:id="@+id/buttonpaciente"
+        android:layout_below="@+id/sub1"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue"
+        android:drawableBottom="@drawable/baseline_person_24"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="60dp"/>
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="135dp"
+        android:id="@+id/buttonesp"
+        android:layout_below="@+id/sub1"
+        android:layout_alignLeft="@id/buttonpaciente"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/blue"
+        android:drawableBottom="@drawable/baseline_design_services_24" />
+
+</RelativeLayout>
