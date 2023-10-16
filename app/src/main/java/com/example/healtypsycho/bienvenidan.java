@@ -20,10 +20,11 @@ public class bienvenidan extends AppCompatActivity {
         inisesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(bienvenidan.this, seleccioninisesion.class));
-
+                startActivity(new Intent( bienvenidan.this, login.class));
             }
         });
+
+
 
         registrarse.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/fondo_degradado"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue2"
+    android:orientation="vertical"
+    tools:context=".login">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,7 +23,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="180dp"
-            android:layout_height="703dp"
+            android:layout_height="620dp"
             android:layout_row="1"
             android:layout_column="1"
             android:layout_columnWeight="8"
