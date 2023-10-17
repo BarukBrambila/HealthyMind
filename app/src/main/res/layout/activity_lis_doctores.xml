@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lis_doctores">
+
+    <Button
+        android:id="@+id/list_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/fecha"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Bienvenido"
+        android:layout_marginLeft="50dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="120dp"
+        android:text="consulta nuestros psicologos"
+        android:textSize="20dp"
+        android:textColor="@color/blue3"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/solid_circle"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/list_logo"
+        android:background="@drawable/logo"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="20dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/image_button1"
+                android:layout_width="220dp"
+                android:layout_height="180dp"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/text_border"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="30dp"/>
+
+            <ImageButton
+                android:id="@+id/image_button2"
+                android:layout_width="220dp"
+                android:layout_height="180dp"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/text_border"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="30dp"/>
+
+            <ImageButton
+                android:id="@+id/image_button3"
+                android:layout_width="220dp"
+                android:layout_height="180dp"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/text_border"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/espe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Especialidades"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="40dp"
+        android:textStyle="italic"
+        android:textColor="@color/blue3"
+        android:textSize="20dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/espe">
+
+        <LinearLayout
+            android:id="@+id/button_container2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/educativo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="20dp"
+                app:icon="@drawable/school"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/gris"
+                android:text="Educativo"
+                android:textSize="17dp"
+                android:textColor="@color/blue3"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/familiar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="20dp"
+                app:icon="@drawable/school"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/gris"
+                android:text="familiar"
+                android:textSize="17dp"
+                android:textColor="@color/blue3"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/familiar2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="20dp"
+                app:icon="@drawable/school"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/gris"
+                android:text="familiar"
+                android:textSize="17dp"
+                android:textColor="@color/blue3"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/text_top_doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top doctores"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:textColor="@color/blue3"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_top_doc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/image_button2a"
+                android:layout_width="313dp"
+                android:layout_height="109dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/text_border"
+                android:backgroundTint="@color/blue" />
+
+            <ImageButton
+                android:id="@+id/image_button2b"
+                android:layout_width="313dp"
+                android:layout_height="109dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/text_border"
+                android:backgroundTint="@color/blue" />
+
+
+            <ImageButton
+                android:id="@+id/image_button2c"
+                android:layout_width="313dp"
+                android:layout_height="109dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/text_border"
+                android:backgroundTint="@color/blue" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
