@@ -3,6 +3,7 @@ package com.example.healtypsycho;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -17,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageView=(ImageView)findViewById(R.id.imageView); // Declare an imageView to show the animation.
         anim = AnimationUtils.loadAnimation(getApplicationContext(),  R.anim.fade_in); // Create the animation.
+
+        if(Build.VERSION.SDK_INT >=Build.VERSION_CODES.LOLLIPOP){
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.white));
+        }
+
         anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
