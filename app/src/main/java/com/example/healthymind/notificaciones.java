@@ -1,16 +1,15 @@
-package com.example.healtypsycho;
+package com.example.healthymind;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class registropaciente extends AppCompatActivity {
+public class notificaciones extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registropaciente);
-
-
+        setContentView(R.layout.activity_notificaciones);
+        
     }
 }

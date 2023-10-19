@@ -1,14 +1,14 @@
-package com.example.healtypsycho;
+package com.example.healthymind;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class seleccioninisesion extends AppCompatActivity {
+public class Activity_Cita extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seleccioninisesion);
+        setContentView(R.layout.activity_cita);
     }
 }

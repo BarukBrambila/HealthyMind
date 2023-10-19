@@ -1,15 +1,14 @@
-package com.example.healtypsycho;
-
-import android.os.Bundle;
+package com.example.healthymind;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class login extends AppCompatActivity {
+import android.os.Bundle;
+
+public class Bienvenida extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_bienvenida);
     }
 }
-
