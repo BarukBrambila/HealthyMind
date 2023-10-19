@@ -34,126 +34,104 @@
 
     </GridLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_marginTop="20dp"
-        android:id="@+id/txtlogin"
-        android:layout_below="@id/imageView"
-        android:fontFamily="@font/fontbold"
-        android:textAlignment="center"
-        android:textSize="35dp"
-        android:textColor="@color/blue2"
-        />
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre:"
-        android:layout_below="@id/txtlogin"
-        android:fontFamily="@font/fontregular"
-        android:textSize="20dp"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="35dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtlogin"
+            android:fontFamily="@font/fontbold"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            android:textColor="@color/blue2"
+            />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtlogin"
-        android:hint="Ingresa tu nombre de usuario"
-        android:textAlignment="center"
-        android:fontFamily="@font/fontregular"
-        android:background="@drawable/text_border"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="80dp"
-        android:id="@+id/setUsername"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-mail:"
+            android:fontFamily="@font/fontregular"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="35dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/setUsername"
-        android:text="E-mail:"
-        android:fontFamily="@font/fontregular"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="35dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="example@example.com"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/text_border"
+            android:textAlignment="center"
+            android:fontFamily="@font/fontregular"
+            android:layout_marginHorizontal="30dp"
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="example@example.com"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/text_border"
-        android:textAlignment="center"
-        android:fontFamily="@font/fontregular"
-        android:layout_marginHorizontal="30dp"
-        android:layout_below="@id/setUsername"
-        android:layout_marginTop="30dp"
-        android:id="@+id/setemail"/>
+            android:id="@+id/setEmail"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Contraseña:"
-        android:layout_below="@id/setemail"
-        android:fontFamily="@font/fontregular"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="35dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contraseña:"
+            android:fontFamily="@font/fontregular"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="35dp"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ingresa tu contraseña"
-        android:inputType="textPassword"
-        android:background="@drawable/text_border"
-        android:layout_below="@id/setemail"
-        android:fontFamily="@font/fontregular"
-        android:textAlignment="center"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/setContrasena"/>
-    <Button
-        android:id="@+id/forgotPasswd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Olvidaste tu contraseña?"
-        android:fontFamily="@font/fontbold"
-        android:onClick="sendMessage"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_below="@id/setContrasena"
-        android:textSize="12dp"
-        android:layout_marginLeft="150dp"
-        android:textStyle="bold"
-        android:textColor="@color/blue3" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa tu contraseña"
+            android:inputType="textPassword"
+            android:background="@drawable/text_border"
+            android:fontFamily="@font/fontregular"
+            android:textAlignment="center"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/setContrasena"/>
+        <Button
+            android:id="@+id/forgotPasswd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Olvidaste tu contraseña?"
+            android:fontFamily="@font/fontbold"
+            android:onClick="sendMessage"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_below="@id/setContrasena"
+            android:textSize="12dp"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue3" />
 
 
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/forgotPasswd"
-        android:backgroundTint="@color/blue3"
-        android:textColor="@color/white"
-        android:fontFamily="@font/fontbold"
-        android:layout_centerHorizontal="true"
-        android:text="Ingresar"
-        android:id="@+id/btnIngresar"/>
-    <Button
-        android:id="@+id/btnBackregister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnIngresar"
-        android:text="Aun no tienes una cuenta? Registrate aqui"
-        android:onClick="sendMessage"
-        style="?android:attr/borderlessButtonStyle"
-        android:textStyle="bold"
-        android:textSize="12dp"
-        android:layout_marginLeft="60dp"
-        android:textColor="@color/blue3"/>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forgotPasswd"
+            android:backgroundTint="@color/blue3"
+            android:textColor="@color/white"
+            android:fontFamily="@font/fontbold"
+            android:layout_gravity="center_horizontal"
+            android:text="Ingresar"
+            android:id="@+id/btnIngresar"/>
+        <Button
+            android:id="@+id/btnBackregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aun no tienes una cuenta? Registrate aqui"
+            android:onClick="sendMessage"
+            style="?android:attr/borderlessButtonStyle"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blue3"/>
 
-
-
+    </LinearLayout>
 
 </RelativeLayout>
