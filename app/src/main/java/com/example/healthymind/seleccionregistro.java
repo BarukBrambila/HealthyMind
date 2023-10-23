@@ -1,4 +1,4 @@
-package com.example.healtypsycho;
+package com.example.healthymind;
 
 import androidx.appcompat.app.AppCompatActivity;
 

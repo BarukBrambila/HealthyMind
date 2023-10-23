@@ -1,9 +1,7 @@
-package com.example.healtypsycho;
+package com.example.healthymind;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.NotificationManager;
-import android.os.Build;
 import android.os.Bundle;
 
 public class notificaciones extends AppCompatActivity {
