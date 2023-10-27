@@ -7,21 +7,26 @@ import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class notificaciones extends AppCompatActivity {
+public class perfilespecialista extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notificaciones);
+        setContentView(R.layout.activity_perfilespecialista);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationview);
         bottomNavigationView.setSelectedItemId(R.id.bottom_date);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
-                case R.id.bottom_notis:
+                case R.id.bottom_perfil:
                     return true;
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), ini_espe.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_notis:
+                    startActivity(new Intent(getApplicationContext(), notificaciones.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
@@ -30,14 +35,8 @@ public class notificaciones extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
-                case R.id.bottom_perfil:
-                    startActivity(new Intent(getApplicationContext(), perfilespecialista.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
             }
             return false;
         });
-        
     }
 }

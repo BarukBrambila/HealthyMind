@@ -15,7 +15,7 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/logo" />
+        android:background="@drawable/logonewsinfondo" />
 
     <GridLayout
         android:layout_width="match_parent"

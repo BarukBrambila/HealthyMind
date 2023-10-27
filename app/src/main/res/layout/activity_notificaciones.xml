@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".notificaciones">
 
-    <Button
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/notificaciones"
-        android:text="crear notificaciones"/>
+        android:layout_height="wrap_content"
+        android:text="VISTA NOTIFICACIONES"
+        android:textAlignment="center"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationview"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_background"
+        android:layout_marginEnd="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:elevation="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/gris"
+        app:itemRippleColor="@color/white"
+        app:labelVisibilityMode="unlabeled"/>
 
 
 

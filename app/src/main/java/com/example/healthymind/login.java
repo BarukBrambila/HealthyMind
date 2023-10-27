@@ -30,12 +30,11 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                FirebaseDatabase database = FirebaseDatabase.getInstance("https://healty-psycho-default-rtdb.firebaseio.com/");
+                //FirebaseDatabase database = FirebaseDatabase.getInstance("https://healty-psycho-default-rtdb.firebaseio.com/");
 
-
-                email = mail.getText().toString();
-                passW = pass.getText().toString();
-
+                //email = mail.getText().toString();
+                //passW = pass.getText().toString();
+                startActivity(new Intent(login.this, ini_espe.class));
 
             }
         });
@@ -46,6 +45,7 @@ public class login extends AppCompatActivity {
                 startActivity(new Intent(login.this, seleccionregistro.class));
             }
         });
+
     }
 }
 

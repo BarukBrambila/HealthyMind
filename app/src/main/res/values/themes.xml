@@ -14,5 +14,9 @@
         <!-- Customize your theme here. -->
         <item name="colorAccent">@color/blue3</item>
     </style>
+    <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+    </style>
 
 </resources>
