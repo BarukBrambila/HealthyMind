@@ -5,6 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ini_espe">
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:background="@drawable/rectangle_3"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/card1"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Algo nuevo que quieras compartir?"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="25dp"/>
+
+    <Button
+        android:id="@+id/agregar_publi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_title"
+        android:text="Agregar publicación"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:backgroundTint="@color/blue"
+        android:background="@drawable/text_border"
+        android:layout_marginTop="10dp"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/card1">
+
+
+
+    </ScrollView>
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
