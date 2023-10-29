@@ -1,0 +1,16 @@
+<shape xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <?xml version="1.0" encoding="utf-8"?>
+
+    <solid android:color="#000080" /> <!-- Fondo blanco -->
+    <corners android:radius="0dp"
+        android:bottomRightRadius="150dp"/> <!-- Bordes redondeados con un radio de 16dp -->
+    <stroke
+        android:width="0dp"
+        android:color="#000080" />
+
+</shape>
+
+
