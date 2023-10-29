@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue2"
-    tools:context=".ini_paciente">
-
+    tools:context=".notificaciones_paciente">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"
@@ -31,7 +30,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="LISTA PUBLICACIONES PACIENTE"
+                android:text="NOTIFICACIONES PACIENTE"
                 android:textAlignment="center"/>
 
 
@@ -53,4 +52,5 @@
         app:itemIconTint="@color/gris"
         app:itemRippleColor="@color/white"
         app:labelVisibilityMode="unlabeled"/>
+
 </RelativeLayout>
