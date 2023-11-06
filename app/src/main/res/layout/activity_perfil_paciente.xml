@@ -6,19 +6,46 @@
     android:layout_height="match_parent"
     android:background="@color/blue2"
     tools:context=".perfil_paciente">
+
+
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:background="@drawable/logo" />
+        android:background="@drawable/cliente" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="Jose Torres"
+        android:textSize="25dp"
+        android:fontFamily="@font/fontbold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="Jose_torres@gmail.com"
+        android:textSize="15dp"
+        android:textColor="@color/white"/>
+
+
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/imageView"
         android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="507dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="76dp"
         android:fillViewport="true">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,16 +54,85 @@
             android:background="@drawable/rounded_background"
             android:orientation="vertical"
             android:padding="16dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="VISTA PERFIL PACIENTE"
-                android:textAlignment="center"/>
 
+
+            <Button
+                android:id="@+id/botton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/editar"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="Editar Perfil"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/botton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/bookmarks"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="Guardados"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/botton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/configuration"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="configuracion"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/botton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/metodo_pago"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="metodo de pago"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/botton5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/terminos_condiciones"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="Terminos y condiciones"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/botton6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/salir"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="cerrar sesion"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
     </ScrollView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
