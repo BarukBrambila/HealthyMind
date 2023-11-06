@@ -119,17 +119,15 @@
             android:layout_gravity="center_horizontal"
             android:text="Ingresar"
             android:id="@+id/btnIngresar"/>
-        <Button
-            android:id="@+id/btnBackregister"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Aun no tienes una cuenta? Registrate aqui"
-            android:onClick="sendMessage"
-            style="?android:attr/borderlessButtonStyle"
-            android:textStyle="bold"
-            android:textSize="12dp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/blue3"/>
+            android:layout_height="match_parent"
+            android:text="¿Quieres ser parte de nuestro equipo de psicologos?Envia tu cv al siguiente correo ejemplo@ejemplo.com"
+            android:layout_marginHorizontal="30dp"
+            android:textColor="@color/blue3"
+            android:fontFamily="@font/fontbold"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"/>
 
     </LinearLayout>
 

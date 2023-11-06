@@ -19,7 +19,6 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        backregistro =(Button) findViewById(R.id.btnBackregister);
         login = (Button) findViewById(R.id.btnIngresar);
         mail = (EditText) findViewById(R.id.setEmail);
         pass = (EditText) findViewById(R.id.setContrasena);
@@ -39,12 +38,6 @@ public class login extends AppCompatActivity {
             }
         });
 
-        backregistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(login.this, seleccionregistro.class));
-            }
-        });
 
     }
 }
