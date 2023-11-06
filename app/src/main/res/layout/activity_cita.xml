@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/logoImageView"
-        android:layout_marginTop="-28dp"
+        android:layout_marginTop="-30dp"
         android:id="@+id/scroll"
         android:fillViewport="true">
 
@@ -40,7 +40,68 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/crear_publi"
+                android:layout_width="314dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/fontbold"
+                android:text="Nombre"
+                android:textColor="#105FD4"
+                android:textSize="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Nombre_cita"
+                android:hint="Ingresa tu nombre completo"
+                android:paddingHorizontal="30dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/fontregular"
+                android:background="@drawable/text_border"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp" />
+
+            <TextView
+                android:layout_width="314dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/fontbold"
+                android:text="Genero"
+                android:textColor="#105FD4"
+                android:textSize="25dp" />
+
+
+            <Spinner
+                android:id="@+id/generoSpinner"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="314dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/fontbold"
+                android:text="Edad"
+                android:textColor="#105FD4"
+                android:textSize="25dp" />
+
+
+            <Spinner
+                android:id="@+id/edadSpinner"
+                android:layout_width="342dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+
+            <TextView
+                android:id="@+id/seleccionar_dia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
@@ -63,114 +124,122 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
+                android:fontFamily="@font/fontbold"
                 android:text="Selecciónar Hora"
                 android:textColor="#105FD4"
                 android:textSize="25dp" />
 
-            <LinearLayout
+            <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="8"
+                android:layout_marginTop="16dp">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="9:00 AM"></Button>
+                    android:text="9:00 AM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="9:30 AM"></Button>
+                    android:text="9:30 AM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="10:00 AM"></Button>
+                    android:text="10:00 AM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="10:30 AM"></Button>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                    android:text="10:30 AM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="11:00 AM"></Button>
+                    android:text="11:00 AM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="11:30 AM"></Button>
+                    android:text="11:30 AM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="12:00 AM"></Button>
+                    android:text="12:00 PM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="12:30 AM"></Button>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="13:00 PM">
-                </Button>
+                    android:text="12:30 PM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="13:30 PM">
-                </Button>
+                    android:text="1:00 PM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="14:00 PM">
-                </Button>
+                    android:text="1:30 PM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="14:30 PM">
-                </Button>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="15:00 PM">
-                </Button>
+                    android:text="2:00 PM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="15:30 PM">
-                </Button>
+                    android:text="2:30 PM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="16:00 PM">
-                </Button>
+                    android:text="3:00 PM" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="16:30 PM">
-                </Button>
-            </LinearLayout>
+                    android:text="3:30 PM" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4:00 PM" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4:30 PM" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="337dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/fontbold"
+                android:gravity="center"
+                android:text="Describe el motivo de tu consulta"
+                android:textColor="#105FD4"
+                android:textSize="25dp" />
+
+            <EditText
+                android:layout_width="314dp"
+                android:layout_height="230dp"
+                android:id="@+id/MotivoRegistro"
+                android:hint="Escribe aqui..."
+                android:paddingHorizontal="85dp"
+                android:textSize="18dp"
+                android:fontFamily="@font/fontregular"
+                android:background="@drawable/text_border"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp" />
 
             <Button
                 android:id="@+id/botton1"
@@ -183,7 +252,7 @@
                 android:drawablePadding="15dp"
                 android:gravity="start|center_vertical"
                 android:paddingHorizontal="20dp"
-                android:text="Siguiente"
+                android:text="Confirmar"
                 android:textColor="@color/white" />
 
 
