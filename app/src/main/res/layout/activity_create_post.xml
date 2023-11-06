@@ -53,10 +53,10 @@
             android:layout_height="59dp"
             android:layout_marginLeft="34dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rectangle_2"
-            android:elevation="50dp"
+            android:background="@drawable/text_border"
+            android:fontFamily="@font/fontregular"
             android:hint="Titulo de la publicación"
-            android:paddingHorizontal="60dp" />
+            android:paddingHorizontal="50dp" />
 
         <EditText
             android:id="@+id/rectangle_3"
@@ -64,10 +64,10 @@
             android:layout_height="230dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="25dp"
-            android:background="@drawable/rectangle_2"
-            android:elevation="50dp"
-            android:hint="Escribe algo aqui"
-            android:paddingHorizontal="85dp" />
+            android:background="@drawable/text_border"
+            android:fontFamily="@font/fontregular"
+            android:hint="Escribe algo aqui...."
+            android:paddingHorizontal="67dp" />
 
         <Button
             android:id="@+id/botton1"
