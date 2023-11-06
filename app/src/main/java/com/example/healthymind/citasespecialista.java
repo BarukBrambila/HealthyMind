@@ -5,33 +5,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.healthymind.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ini_paciente extends AppCompatActivity {
+public class citasespecialista extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ini_paciente);
+        setContentView(R.layout.activity_citasespecialista);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationview);
-        bottomNavigationView.setSelectedItemId(R.id.bottom_home);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_date);
+
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
-                case R.id.bottom_home:
-                    return true;
                 case R.id.bottom_date:
-                    startActivity(new Intent(getApplicationContext(), listapsicologos_cita.class));
+                    return true;
+                case R.id.bottom_home:
+                    startActivity(new Intent(getApplicationContext(), ini_espe.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_notis:
-                    startActivity(new Intent(getApplicationContext(), notificaciones_paciente.class));
+                    startActivity(new Intent(getApplicationContext(), notificaciones.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_perfil:
-                    startActivity(new Intent(getApplicationContext(), perfil_paciente.class));
+                    startActivity(new Intent(getApplicationContext(), perfilespecialista.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;

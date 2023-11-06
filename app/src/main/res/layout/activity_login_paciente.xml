@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/blue2"
-    android:orientation="vertical"
-    tools:context=".login">
-
+    tools:context=".login_paciente">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="120dp"
@@ -43,7 +41,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login Especialista"
+            android:text="Login Paciente"
             android:layout_marginTop="20dp"
             android:id="@+id/txtlogin"
             android:fontFamily="@font/fontbold"
@@ -119,15 +117,18 @@
             android:layout_gravity="center_horizontal"
             android:text="Ingresar"
             android:id="@+id/btnIngresar"/>
-        <TextView
+        <Button
+            android:id="@+id/btnBackregister"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="¿Quieres ser parte de nuestro equipo de psicologos?Envia tu cv al siguiente correo ejemplo@ejemplo.com"
-            android:layout_marginHorizontal="30dp"
-            android:textColor="@color/blue3"
-            android:fontFamily="@font/fontbold"
-            android:layout_marginTop="15dp"
-            android:textAlignment="center"/>
+            android:layout_height="wrap_content"
+            android:text="Aun no tienes una cuenta? Registrate aqui"
+            android:onClick="sendMessage"
+            style="?android:attr/borderlessButtonStyle"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/blue3"/>
+
 
     </LinearLayout>
 

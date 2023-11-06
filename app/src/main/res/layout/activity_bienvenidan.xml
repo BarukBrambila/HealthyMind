@@ -18,7 +18,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/logo"
         android:layout_marginTop="30dp"
-        android:background="@drawable/logo" />
+        android:background="@drawable/logonewsinfondo" />
 
     <GridLayout
         android:layout_width="match_parent"

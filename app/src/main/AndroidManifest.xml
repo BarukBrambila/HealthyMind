@@ -13,10 +13,19 @@
         android:theme="@style/Theme.HealthyMind"
         tools:targetApi="31">
         <activity
-            android:name=".detalles_cita"
+            android:name=".cita2"
             android:exported="false" />
         <activity
-            android:name="com.example.perfil_user"
+            android:name=".perfil_paciente"
+            android:exported="false" />
+        <activity
+            android:name=".notificaciones_paciente"
+            android:exported="false" />
+        <activity
+            android:name=".login_paciente"
+            android:exported="false" />
+        <activity
+            android:name=".seleccioniniciarsesion"
             android:exported="false" />
         <activity
             android:name=".ini_espe"
@@ -25,16 +34,16 @@
             android:name=".ini_paciente"
             android:exported="false" />
         <activity
-            android:name=".inicio_paciente"
-            android:exported="false" />
-        <activity
             android:name=".notificaciones"
             android:exported="false" />
         <activity
-            android:name=".lis_doctores"
+            android:name=".citasespecialista"
             android:exported="false" />
         <activity
-            android:name=".publicaciones_esp"
+            android:name=".perfilespecialista"
+            android:exported="false" />
+        <activity
+            android:name=".listapsicologos_cita"
             android:exported="false" />
         <activity
             android:name=".Activity_CreatePost"

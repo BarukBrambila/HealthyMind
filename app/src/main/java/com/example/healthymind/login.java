@@ -19,7 +19,6 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        backregistro =(Button) findViewById(R.id.btnBackregister);
         login = (Button) findViewById(R.id.btnIngresar);
         mail = (EditText) findViewById(R.id.setEmail);
         pass = (EditText) findViewById(R.id.setContrasena);
@@ -30,22 +29,16 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                FirebaseDatabase database = FirebaseDatabase.getInstance("https://healty-psycho-default-rtdb.firebaseio.com/");
+                //FirebaseDatabase database = FirebaseDatabase.getInstance("https://healty-psycho-default-rtdb.firebaseio.com/");
 
-
-                email = mail.getText().toString();
-                passW = pass.getText().toString();
-
+                //email = mail.getText().toString();
+                //passW = pass.getText().toString();
+                startActivity(new Intent(login.this, ini_espe.class));
 
             }
         });
 
-        backregistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(login.this, seleccionregistro.class));
-            }
-        });
+
     }
 }
 

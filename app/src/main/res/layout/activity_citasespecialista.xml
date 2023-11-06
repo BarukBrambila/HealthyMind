@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".notificaciones">
-
+    tools:context=".citasespecialista">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="VISTA NOTIFICACIONES"
+        android:text="VISTA CITAS ESPECIALISTA"
         android:textAlignment="center"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -26,7 +25,5 @@
         app:itemIconTint="@color/gris"
         app:itemRippleColor="@color/white"
         app:labelVisibilityMode="unlabeled"/>
-
-
 
 </RelativeLayout>
