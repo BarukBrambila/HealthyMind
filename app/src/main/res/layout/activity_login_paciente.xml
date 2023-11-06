@@ -129,6 +129,7 @@
             android:layout_gravity="center_horizontal"
             android:textColor="@color/blue3"/>
 
+
     </LinearLayout>
 
 </RelativeLayout>
