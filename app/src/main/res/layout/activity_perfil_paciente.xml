@@ -31,13 +31,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:id="@+id/txtemail"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:text="Jose_torres@gmail.com"
         android:textSize="15dp"
         android:textColor="@color/white"/>
-
-
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -132,6 +131,9 @@
         </LinearLayout>
 
     </ScrollView>
+
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
