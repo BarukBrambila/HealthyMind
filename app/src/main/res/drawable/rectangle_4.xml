@@ -4,9 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <solid android:color="#000080" /> <!-- Fondo blanco -->
+    <solid android:color="#000080" /> <!-- Fondo azul -->
     <corners android:radius="0dp"
-        android:bottomRightRadius="150dp"/> <!-- Bordes redondeados con un radio de 16dp -->
+        android:bottomRightRadius="150dp"/>
     <stroke
         android:width="0dp"
         android:color="#000080" />
