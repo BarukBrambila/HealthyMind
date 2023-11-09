@@ -117,8 +117,8 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:clipToPadding="false"
                 android:paddingStart="35dp"
                 android:paddingEnd="30dp" />
