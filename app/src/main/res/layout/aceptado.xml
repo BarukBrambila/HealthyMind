@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/success"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@id/elipse"
         android:layout_centerHorizontal="true"
         android:textSize="25dp"
@@ -49,7 +49,7 @@
         android:id="@+id/descripción"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="35dp"
         android:textSize="16dp"
         android:text="Su pago se realizó exitosamente, su cita \n ha sido programada"/>
 
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/descripción"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/boton_degradado"
         android:text="continuar"
         android:textColor="@color/white"></Button>
