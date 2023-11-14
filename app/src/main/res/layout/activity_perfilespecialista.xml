@@ -63,7 +63,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="521dp"
-        android:layout_below="@id/ratingBar"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/topLayout"
         android:background="@drawable/right_rounded"/>
     <ScrollView
         android:layout_width="match_parent"
@@ -169,25 +170,15 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="140dp"
         android:background="@drawable/border_2" />
-    <!-- Ranking -->
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="47dp"
-        android:layout_below="@id/topLayout"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="29dp"
-        android:layout_toEndOf="@id/image_perfil"
-        android:numStars="2" />
     <!-- Botón de Reseñas -->
     <Button
         android:id="@+id/botonReseñas"
-        android:layout_below="@id/ratingBar"
+        android:layout_below="@id/topLayout"
         android:layout_width="130dp"
         android:layout_height="30dp"
         android:layout_toEndOf="@id/image_perfil"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/bottom_background"
         android:text="reseñas"
         android:textColor="@color/white"
