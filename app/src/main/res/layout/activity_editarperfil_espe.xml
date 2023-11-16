@@ -32,10 +32,11 @@
             android:id="@+id/imgperfil"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:src="@drawable/cieloejemlo"
+            android:src="@drawable/imgejemplo"
             app:civ_border_color="@color/white"
             android:layout_width="100dp"
-            android:layout_height="100dp"/>
+            android:layout_height="100dp"
+            tools:ignore="MissingClass" />
 
         <Button
             android:layout_width="200dp"

@@ -12,10 +12,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="150dp"
         android:layout_gravity="center"
-        android:src="@drawable/cieloejemlo"
+        android:src="@drawable/imgejemplo"
         app:civ_border_color="@color/blue2"
         android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_height="100dp"
+        tools:ignore="MissingClass" />
 
     <TextView
         android:id="@+id/txtnombre"
