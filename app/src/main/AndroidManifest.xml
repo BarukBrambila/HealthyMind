@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,7 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".perfil_espe1"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".perfil_paciente"
             android:exported="false" />
