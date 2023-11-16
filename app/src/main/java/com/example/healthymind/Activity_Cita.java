@@ -12,5 +12,6 @@ public class Activity_Cita extends AppCompatActivity {
         setContentView(R.layout.activity_cita);
 
 
+
     }
 }
