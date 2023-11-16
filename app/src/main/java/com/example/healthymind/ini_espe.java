@@ -32,7 +32,7 @@ public class ini_espe extends AppCompatActivity {
                     finish();
                     return true;
                 case R.id.bottom_perfil:
-                    startActivity(new Intent(getApplicationContext(), perfilespecialista.class));
+                    startActivity(new Intent(getApplicationContext(), perfil_espe1.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;

@@ -1,24 +1,26 @@
 package com.example.healthymind;
 
 public class listseleccionesp {
-    public String nombre;
+    public String nombres;
     public String especialidad;
     public String preio;
     public String foto;
 
-    public listseleccionesp(String nombre, String especialidad, String preio, String foto) {
-        this.nombre = nombre;
+    public listseleccionesp(String nombres, String especialidad, String preio, String foto) {
+        this.nombres = nombres;
         this.especialidad = especialidad;
         this.preio = preio;
         this.foto = foto;
     }
+    public listseleccionesp(){
 
+    }
     public String getNombre() {
-        return nombre;
+        return nombres;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String nombres) {
+        this.nombres = nombres;
     }
 
     public String getEspecialidad() {

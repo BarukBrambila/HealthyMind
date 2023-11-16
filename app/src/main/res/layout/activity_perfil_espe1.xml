@@ -5,21 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue2"
-    tools:context=".perfil_paciente">
-
-    <ImageView
+    tools:context=".perfil_espe1">
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:civ_border_width="4dp"
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_weight="1"
-        android:background="@drawable/cliente" />
+        android:layout_marginLeft="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/cieloejemlo"
+        app:civ_border_color="@color/blue2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
     <TextView
+        android:id="@+id/txtnombre"
         android:layout_width="wrap_content"
         android:layout_height="34dp"
-        android:id="@+id/txtnom"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         android:text="Jose Torres"
@@ -30,7 +31,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:id="@+id/txtemailpaciente"
+        android:id="@+id/txtemail"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:text="Jose_torres@gmail.com"
@@ -55,7 +56,7 @@
 
 
             <Button
-                android:id="@+id/botton1"
+                android:id="@+id/btneditar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -92,7 +93,7 @@
                 android:text="Terminos y condiciones"
                 android:textColor="@color/black" />
             <Button
-                android:id="@+id/cerrarsesionbtn"
+                android:id="@+id/cerrarsesionbtn_espe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -121,4 +122,5 @@
         app:itemIconTint="@color/gris"
         app:itemRippleColor="@color/white"
         app:labelVisibilityMode="unlabeled"/>
+
 </RelativeLayout>

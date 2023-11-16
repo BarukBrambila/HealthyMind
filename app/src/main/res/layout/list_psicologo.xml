@@ -22,18 +22,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="10dp">
-            <ImageView
-                android:id="@+id/icono"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
-                android:background="@drawable/img_3"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:civ_border_width="4dp"
+                android:id="@+id/imageView"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                android:paddingLeft="14dp"
-                android:paddingRight="14dp"
-                android:layout_alignParentLeft="true"
-                ></ImageView>
+                android:src="@drawable/cieloejemlo"
+                app:civ_border_color="@color/white"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
             <LinearLayout
                 android:id="@+id/linearselectpsicologo"
                 android:layout_width="wrap_content"
@@ -41,35 +39,39 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
-                android:layout_toEndOf="@+id/icono"
+                android:layout_toEndOf="@+id/imageView"
                 android:orientation="vertical"
                 android:layout_marginLeft="4dp"
-                android:layout_toRightOf="@+id/icono">
+                android:layout_toRightOf="@+id/imageView">
                 <TextView
                     android:id="@+id/nombretxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
+                    android:layout_marginTop="15dp"
                     android:text="Nombre Psicologo"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
+                    android:textColor="@color/blue2"
+                    android:fontFamily="@font/fontbold"
                     android:textSize="20sp"/>
                 <TextView
                     android:id="@+id/especialidadtxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/fontregular"
                     android:text="Especialidad"
-                    android:textSize="18sp"/>
+                    android:textSize="12dp"/>
                 <TextView
                     android:id="@+id/costotxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Precio por consulta"
+                    android:fontFamily="@font/fontbold"
+                    android:text="$300MXM"
                     android:textColor="@color/blue4"/>
             </LinearLayout>
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="15dp"
                 android:layout_alignParentEnd="true"

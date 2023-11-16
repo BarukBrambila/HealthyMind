@@ -1,18 +1,38 @@
 package com.example.healthymind;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
-public class listapsicologos_cita extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class listapsicologos_cita extends AppCompatActivity  {
+    private RecyclerView especialistaRV;
+    private ArrayList<listseleccionesp> listseleccionespArrayList;
+    private ListAdapter listAdapter;
+    private FirebaseFirestore mFirestore;
 
     //private String[] buttonsLabels = {"image_button1", "image_button2", "image_button3"};
    // private String[] getButtonsLabels = {"button1", "button2", "button3"};
@@ -24,6 +44,35 @@ public class listapsicologos_cita extends AppCompatActivity {
         setContentView(R.layout.activity_listapsicologos_cita);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationview);
         bottomNavigationView.setSelectedItemId(R.id.bottom_home);
+        especialistaRV = findViewById(R.id.listapsicologos);
+        mFirestore = FirebaseFirestore.getInstance();
+
+        //Crear nuevo arraylist
+        listseleccionespArrayList = new ArrayList<>();
+        especialistaRV.setHasFixedSize(true);
+        especialistaRV.setLayoutManager(new LinearLayoutManager(this));
+
+        listAdapter = new ListAdapter(listseleccionespArrayList, this);
+        especialistaRV.setAdapter(listAdapter);
+
+        mFirestore.collection("users-especialista").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                for (DocumentSnapshot d : list){
+                    listseleccionesp l = d.toObject(listseleccionesp.class);
+                    listseleccionespArrayList.add(l);
+                }
+                listAdapter.notifyDataSetChanged();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.e("listapsicologos_cita->", ""+e);
+            }
+        });
+
+
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.bottom_date:

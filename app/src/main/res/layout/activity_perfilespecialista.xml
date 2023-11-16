@@ -25,7 +25,7 @@
 
         <!-- Nombre Especialista -->
         <TextView
-            android:id="@+id/NombreEspecialista"
+            android:id="@+id/nombretxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
@@ -39,7 +39,7 @@
         <!-- Especialidad -->
         <TextView
             android:id="@+id/Especialidad"
-            android:layout_below="@+id/NombreEspecialista"
+            android:layout_below="@+id/nombretxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -56,8 +56,8 @@
             android:layout_marginTop="40dp"
             android:layout_width="139dp"
             android:layout_height="123dp"
-            android:layout_marginEnd="25dp"
-            android:layout_toEndOf="@+id/NombreEspecialista"
+            android:layout_marginLeft="50dp"
+            android:layout_toEndOf="@+id/nombretxt"
             app:srcCompat="@drawable/logonewsinfondo" />
     </RelativeLayout>
     <LinearLayout
@@ -145,8 +145,8 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:clipToPadding="false"
                 android:paddingStart="35dp"
                 android:paddingEnd="30dp" />
