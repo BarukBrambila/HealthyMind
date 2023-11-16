@@ -105,7 +105,21 @@
             android:layout_gravity="center"/>
 
     </FrameLayout>
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationview"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_background"
+        android:layout_marginEnd="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:elevation="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/gris"
+        app:itemRippleColor="@color/white"
+        app:labelVisibilityMode="unlabeled"/>
     <Button
         android:id="@+id/notifiButton"
         android:layout_width="wrap_content"
