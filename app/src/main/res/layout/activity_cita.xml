@@ -134,148 +134,148 @@
                 android:layout_marginTop="16dp"
                 android:columnCount="3">
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="9:00 AM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="9:30 AM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="10:00 AM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:text="10:00 AM" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="10:30 AM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="11:00 AM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="11:30 AM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="12:00 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="12:30 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="1:00 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="1:30 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="2:00 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="2:30 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="3:00 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="3:30 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="4:00 PM" />
 
-                <Button
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="4:30 PM" />
-                <Button
+
+                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:text="5:00 PM" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:text="5:30 PM" />
             </GridLayout>
 
             <TextView
