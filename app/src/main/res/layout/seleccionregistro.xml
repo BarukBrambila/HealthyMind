@@ -8,12 +8,11 @@
     android:background="@color/blue3"
     tools:context=".seleccionregistro">
 
-
-
     <ImageView
         android:id="@+id/toplogo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/logonewsinfondo" />
 
@@ -21,17 +20,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toplogo"
+        android:layout_marginTop="80dp"
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="367dp"
-            android:layout_margin="26dp"
+            android:layout_marginHorizontal="26dp"
             android:layout_marginVertical="10dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="40dp" />
-
-
     </GridLayout>
 
     <TextView
@@ -44,7 +42,7 @@
         android:textAlignment="center"
         android:textSize="28dp"
         android:layout_below="@id/toplogo"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="140dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -71,5 +69,4 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
         android:drawableBottom="@drawable/baseline_design_services_24" />
-
 </RelativeLayout>

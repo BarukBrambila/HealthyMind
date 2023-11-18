@@ -9,10 +9,9 @@
     <de.hdodenhof.circleimageview.CircleImageView
         app:civ_border_width="4dp"
         android:id="@+id/imageView"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="150dp"
-        android:layout_gravity="center"
-        android:src="@drawable/imgejemplo"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img_3"
         app:civ_border_color="@color/blue2"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -23,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="34dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
+        android:layout_below="@id/imageView"
         android:text="Jose Torres"
         android:textSize="25dp"
         android:fontFamily="@font/fontbold"
@@ -31,13 +30,20 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:id="@+id/txtemail"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_below="@id/txtnombre"
         android:text="Jose_torres@gmail.com"
         android:textSize="15dp"
         android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtemail"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_background"/>
+
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -48,13 +54,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:background="@drawable/rounded_background"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
-
 
             <Button
                 android:id="@+id/btneditar"

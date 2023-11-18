@@ -9,34 +9,34 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="445dp"
-        android:layout_marginTop="-80dp"
+        android:contentDescription="fondo"
         android:background="@drawable/img"/>
 
     <ImageView
-        android:layout_width="278dp"
-        android:layout_height="264dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/logo"
+        android:contentDescription="Logo aplicación"
         android:layout_marginTop="30dp"
         android:background="@drawable/logonewsinfondo" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_below="@+id/logo"
+        android:layout_marginTop="20dp"
         android:layout_height="match_parent"
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
             android:layout_width="160dp"
-            android:layout_height="491dp"
+            android:layout_height="690dp"
             android:layout_row="1"
             android:layout_column="1"
             android:layout_columnWeight="8"
             android:layout_marginVertical="10dp"
             app:cardBackgroundColor="@color/blue3"
             app:cardCornerRadius="40dp" />
-
-
     </GridLayout>
 
     <TextView
@@ -45,44 +45,44 @@
         android:text="BIENVENIDO"
         android:id="@+id/titulo"
         android:layout_below="@+id/logo"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:textAlignment="center"
-        android:textSize="32dp"
+        android:textSize="32sp"
         android:fontFamily="@font/fontbold"
         android:textColor="@color/white"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/txtslogan"
+        android:layout_width="309dp"
         android:layout_height="wrap_content"
-        android:text="Agenda tus citas con nuestros psicologos"
         android:layout_below="@+id/titulo"
-        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/fontregular"
-        android:textSize="20dp"
-        android:textColor="@color/white"/>
+        android:text="Agenda tus citas con nuestros psicologos"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/inisesion"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_below="@+id/titulo"
+        android:layout_width="217dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/txtslogan"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/blue"
-        android:textColor="@color/blue2"
-        android:text="Iniciar Sesión" />
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_login_bienvenida"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/blue2" />
 
     <Button
         android:id="@+id/regist"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
+        android:layout_width="217dp"
+        android:layout_height="61dp"
         android:layout_below="@+id/inisesion"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/blue"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/blue2"
-        android:text="Registrarse"/>
-
-
-
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_register_bienvenida"
+        android:text="Registrarse"
+        android:textColor="@color/white" />
 </RelativeLayout>

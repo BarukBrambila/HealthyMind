@@ -70,9 +70,6 @@
             android:name=".seleccionregistro"
             android:exported="false" />
         <activity
-            android:name=".Bienvenida"
-            android:exported="false" />
-        <activity
             android:name=".login"
             android:exported="false" />
         <activity
