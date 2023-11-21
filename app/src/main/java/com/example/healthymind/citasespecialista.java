@@ -73,8 +73,6 @@ public class citasespecialista extends AppCompatActivity {
                                         for (QueryDocumentSnapshot document : task.getResult()) {
                                             String id = document.getId();
                                             hr1=(CheckBox)findViewById(R.id.hr1);
-
-
                                             String dayOfMonth = String.valueOf(calendario.getDayOfMonth());
                                             String mes = String.valueOf(calendario.getMonth()+1);
                                             String año = String.valueOf(calendario.getYear());
@@ -86,47 +84,88 @@ public class citasespecialista extends AppCompatActivity {
                                                 map.put("hora_inicial","9:00");
                                                 map.put("hora_final", "9:50");
                                                 agendar(map, id, fecha, n);
-                                            }if (hr2.isChecked()){
+                                            }else{
+                                                String n = "1";
+                                                Map<String, Object> map = new HashMap<>();
+                                                map.put("estado","");
+                                                agendar(map, id, fecha, n);
+                                            }
+                                            if (hr2.isChecked()){
                                                 String n = "2";
                                                 Map<String, Object> map = new HashMap<>();
                                                 map.put("estado", "disponible");
                                                 map.put("hora_inicial","10:00");
                                                 map.put("hora_final", "10:50");
                                                 agendar(map, id, fecha, n);
-                                            } if (hr3.isChecked()){
+                                            } else{
+                                                String n = "2";
+                                                Map<String, Object> map = new HashMap<>();
+                                                map.put("estado","");
+                                                agendar(map, id, fecha, n);
+                                            }
+                                            if (hr3.isChecked()){
                                                 String n = "3";
                                                 Map<String, Object> map = new HashMap<>();
                                                 map.put("estado", "disponible");
                                                 map.put("hora_inicial","11:00");
                                                 map.put("hora_final", "11:50");
                                                 agendar(map, id, fecha, n);
-                                            }if (hr4.isChecked()){
+                                            }else{
+                                                String n = "3";
+                                                Map<String, Object> map = new HashMap<>();
+                                                map.put("estado","");
+                                                agendar(map, id, fecha, n);
+                                            }
+                                            if (hr4.isChecked()){
                                                 String n = "4";
                                                 Map<String, Object> map = new HashMap<>();
                                                 map.put("estado", "disponible");
                                                 map.put("hora_inicial","16:00");
                                                 map.put("hora_final", "16:50");
                                                 agendar(map, id, fecha, n);
-                                            }if (hr5.isChecked()){
+                                            }else{
+                                                String n = "4";
+                                                Map<String, Object> map = new HashMap<>();
+                                                map.put("estado","");
+                                                agendar(map, id, fecha, n);
+                                            }
+                                            if (hr5.isChecked()){
                                                 String n = "5";
                                                 Map<String, Object> map = new HashMap<>();
                                                 map.put("estado", "disponible");
                                                 map.put("hora_inicial","17:00");
                                                 map.put("hora_final", "17:50");
                                                 agendar(map, id, fecha, n);
-                                            }if (hr6.isChecked()){
+                                            }else{
+                                                String n = "5";
+                                                Map<String, Object> map = new HashMap<>();
+                                                map.put("estado","");
+                                                agendar(map, id, fecha, n);
+                                            }
+                                            if (hr6.isChecked()){
                                                 String n = "6";
                                                 Map<String, Object> map = new HashMap<>();
                                                 map.put("estado", "disponible");
                                                 map.put("hora_inicial","18:00");
                                                 map.put("hora_final", "18:50");
                                                 agendar(map, id, fecha, n);
-                                            }if (hr7.isChecked()){
+                                            }else{
+                                                String n = "6";
+                                                Map<String, Object> map = new HashMap<>();
+                                                map.put("estado","");
+                                                agendar(map, id, fecha, n);
+                                            }
+                                            if (hr7.isChecked()){
                                                 String n = "7";
                                                 Map<String, Object> map = new HashMap<>();
                                                 map.put("estado", "disponible");
                                                 map.put("hora_inicial","19:00");
                                                 map.put("hora_final", "19:50");
+                                                agendar(map, id, fecha, n);
+                                            }else{
+                                                String n = "7";
+                                                Map<String, Object> map = new HashMap<>();
+                                                map.put("estado","");
                                                 agendar(map, id, fecha, n);
                                             }
 
