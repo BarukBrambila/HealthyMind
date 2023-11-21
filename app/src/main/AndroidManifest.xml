@@ -61,6 +61,9 @@
             android:name=".Activity_CreatePost"
             android:exported="false" />
         <activity
+            android:name=".detalles_cita"
+            android:exported="false" />
+        <activity
             android:name=".registropaciente"
             android:exported="false" />
         <activity

@@ -1,6 +1,7 @@
 package com.example.healthymind;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,18 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         holder.especialidad.setText(listseleccionesp.getEspecialidad());
         Glide.with(context).load(listseleccionesp.getFoto()).into(holder.foto);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, perfilespecialista.class);
+                intent.putExtra("id",listseleccionesp.getRfc());
+                context.startActivity(intent);
+
+            }
+        });
+
+
 
     }
 
@@ -52,6 +65,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder{
         private final TextView nombre;
         private final TextView especialidad;
+        public String rfc;
         private final CircleImageView foto;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
