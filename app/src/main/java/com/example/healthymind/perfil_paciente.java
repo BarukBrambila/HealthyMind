@@ -91,5 +91,18 @@ public class perfil_paciente extends AppCompatActivity {
             }
             return false;
         });
+        Button button = findViewById(R.id.TyC);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(perfil_paciente.this,pdfActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
     }
 }

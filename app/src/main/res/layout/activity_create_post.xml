@@ -21,11 +21,11 @@
         android:layout_width="157dp"
         android:layout_height="178dp"
         android:layout_marginLeft="120dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logonewsinfondo" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="561dp"
+        android:layout_height="match_parent"
         android:layout_below="@id/logoImageView"
         android:layout_marginStart="0dp"
         android:layout_marginTop="20dp"
@@ -34,7 +34,6 @@
         android:background="@drawable/rounded_background"
         android:orientation="vertical"
         android:padding="16dp">
-
 
         <TextView
             android:id="@+id/crear_publi"

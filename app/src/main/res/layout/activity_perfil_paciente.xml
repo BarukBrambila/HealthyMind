@@ -12,7 +12,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:background="@drawable/cliente" />
 
@@ -20,8 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="34dp"
         android:id="@+id/txtnom"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
+        android:layout_below="@id/imageView"
         android:text="Jose Torres"
         android:textSize="25dp"
         android:fontFamily="@font/fontbold"
@@ -31,17 +32,18 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:id="@+id/txtemailpaciente"
+        android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_below="@id/txtnom"
         android:text="Jose_torres@gmail.com"
-        android:textSize="15dp"
+        android:textSize="18dp"
         android:textColor="@color/white"/>
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="507dp"
-        android:layout_below="@id/imageView"
-        android:layout_marginTop="76dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtemailpaciente"
+        android:layout_marginTop="20dp"
         android:fillViewport="true">
 
         <LinearLayout
@@ -52,8 +54,6 @@
             android:background="@drawable/rounded_background"
             android:orientation="vertical"
             android:padding="16dp">
-
-
             <Button
                 android:id="@+id/botton1"
                 android:layout_width="match_parent"
@@ -66,7 +66,6 @@
                 android:paddingHorizontal="85dp"
                 android:text="Editar Perfil"
                 android:textColor="@color/black" />
-
             <Button
                 android:id="@+id/botton4"
                 android:layout_width="match_parent"
@@ -80,7 +79,7 @@
                 android:text="metodo de pago"
                 android:textColor="@color/black" />
             <Button
-                android:id="@+id/botton5"
+                android:id="@+id/TyC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -105,7 +104,6 @@
                 android:textColor="@color/black" />
         </LinearLayout>
     </ScrollView>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
