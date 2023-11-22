@@ -4,12 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <solid android:color="#000080" /> <!-- Fondo azul -->
+    <solid android:color="@color/blue2" /> <!-- Fondo azul -->
     <corners android:radius="0dp"
         android:bottomRightRadius="150dp"/>
     <stroke
         android:width="0dp"
-        android:color="#000080" />
+        android:color="@color/blue2" />
 
 </shape>
 

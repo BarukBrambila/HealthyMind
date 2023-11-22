@@ -47,25 +47,25 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="135dp"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
         android:id="@+id/buttonpaciente"
         android:layout_below="@+id/sub1"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
-        android:drawableBottom="@drawable/baseline_person_24"
+        android:drawableBottom="@drawable/chicos"
         android:textColor="@color/black"
         android:layout_marginHorizontal="60dp"/>
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="135dp"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
         android:id="@+id/buttonesp"
         android:layout_below="@+id/sub1"
         android:layout_alignLeft="@id/buttonpaciente"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
-        android:drawableBottom="@drawable/baseline_design_services_24" />
+        android:drawableBottom="@drawable/psychologist" />
 
 </RelativeLayout>

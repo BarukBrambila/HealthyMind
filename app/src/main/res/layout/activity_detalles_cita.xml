@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/desing_fondo"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="180dp"
         android:background="@drawable/rectangle_4"/>
 
     <Button
@@ -21,46 +21,47 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"/>
 
-    <TextView
-        android:id="@+id/text_title2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/fontbold"
-        android:text="Nombre"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/white"
-        android:textSize="25dp"/>
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_perfil"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="170dp"
-        android:layout_below="@+id/text_title2"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/img_3"
         app:civ_border_color="@color/blue2"
         app:civ_border_width="4dp"
         tools:ignore="MissingClass" />
+    <TextView
+        android:id="@+id/text_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/image_perfil"
+        android:fontFamily="@font/fontbold"
+        android:text="Nombre"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:textSize="25dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtespe"
-        android:text="psicologo educativo"
-        android:layout_below="@id/image_perfil"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
+        android:text="Especialidad"
+        android:layout_marginLeft="20dp"
+        android:layout_toEndOf="@id/image_perfil"
+        android:layout_marginTop="90dp"
         android:textSize="20dp"
         android:fontFamily="@font/fontregular"
         android:textColor="@color/white"/>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/desing_fondo"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,6 +87,16 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp" />
 
+            <Button
+                android:id="@+id/confirmarbtn"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bottom_background"
+                android:text="Confirmar dia"
+                android:textColor="@color/white" />
+
             <TextView
                 android:layout_width="314dp"
                 android:layout_height="wrap_content"
@@ -97,9 +108,77 @@
                 android:textColor="#105FD4"
                 android:textSize="25dp" />
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:columnCount="3">
+
+                <CheckBox
+                    android:id="@+id/hr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="9:00am" />
+
+                <CheckBox
+                    android:id="@+id/hr2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="10:00am" />
+
+                <CheckBox
+                    android:id="@+id/hr3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="11:00am" />
+
+                <CheckBox
+                    android:id="@+id/hr4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="4:00pm" />
+
+                <CheckBox
+                    android:id="@+id/hr5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="5:00pm" />
+
+                <CheckBox
+                    android:id="@+id/hr6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="6:00pmm" />
+
+                <CheckBox
+                    android:id="@+id/hr7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="7:00pm" />
+            </GridLayout>
+
 
             <Button
                 android:id="@+id/agendar"
@@ -109,13 +188,6 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bottom_background"
                 android:text="AgendAR"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="h"
                 android:textColor="@color/white" />
 
         </LinearLayout>
