@@ -111,5 +111,19 @@ public class perfil_espe1 extends AppCompatActivity {
             }
             return false;
         });
+
+        Button button = findViewById(R.id.TYC2);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(perfil_espe1.this,pdfActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
     }
 }
