@@ -29,6 +29,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import org.w3c.dom.Text;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -36,10 +38,11 @@ public class detalles_cita extends AppCompatActivity {
     DatePicker calendario;
     TextView nom , especialidad;
     CircleImageView img;
-    String fecha;
+    String fecha, fecha1;
+    String hora1, hora2, hora3, hora4, hora5, hora6, hora7;
     CheckBox hr1, hr2, hr3, hr4, hr5, hr6, hr7;
 
-    Button confirmar;
+    Button confirmar, agendar;
     final Calendar myCalendar = Calendar.getInstance();
 
     @Override
@@ -51,6 +54,7 @@ public class detalles_cita extends AppCompatActivity {
         especialidad=(TextView)findViewById(R.id.txtespe);
         img =(CircleImageView)findViewById(R.id.image_perfil);
         confirmar=(Button)findViewById(R.id.confirmarbtn);
+        agendar=(Button)findViewById(R.id.agendar);
         hr1=(CheckBox)findViewById(R.id.hr1);
         hr2=(CheckBox)findViewById(R.id.hr2);
         hr3=(CheckBox)findViewById(R.id.hr3);
@@ -88,6 +92,7 @@ public class detalles_cita extends AppCompatActivity {
                                             String mes = String.valueOf(calendario.getMonth() + 1);
                                             String año = String.valueOf(calendario.getYear());
                                             fecha = dayOfMonth + mes + año;
+                                            fecha1 = dayOfMonth +"/"+ mes + "/" + año;
                                             db.collection("users-especialista/" + curp + "/agenda").document(fecha).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -100,6 +105,7 @@ public class detalles_cita extends AppCompatActivity {
                                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                                     if (documentSnapshot.getString("estado")!= ""){
                                                                         hr1.setVisibility(View.VISIBLE);
+                                                                        hora1= documentSnapshot.getString("hora_inicial");
                                                                     }
 
                                                                 }
@@ -109,6 +115,7 @@ public class detalles_cita extends AppCompatActivity {
                                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                                     if (documentSnapshot.getString("estado") != ""){
                                                                         hr2.setVisibility(View.VISIBLE);
+                                                                        hora2= documentSnapshot.getString("hora_inicial");
                                                                     }
 
                                                                 }
@@ -118,6 +125,7 @@ public class detalles_cita extends AppCompatActivity {
                                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                                     if (documentSnapshot.getString("estado")!=""){
                                                                         hr3.setVisibility(View.VISIBLE);
+                                                                        hora3= documentSnapshot.getString("hora_inicial");
                                                                     }
 
                                                                 }
@@ -127,6 +135,7 @@ public class detalles_cita extends AppCompatActivity {
                                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                                     if (documentSnapshot.getString("estado")!=""){
                                                                         hr4.setVisibility(View.VISIBLE);
+                                                                        hora4= documentSnapshot.getString("hora_inicial");
                                                                     }
 
                                                                 }
@@ -136,6 +145,7 @@ public class detalles_cita extends AppCompatActivity {
                                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                                     if (documentSnapshot.getString("estado")!=""){
                                                                         hr5.setVisibility(View.VISIBLE);
+                                                                        hora5= documentSnapshot.getString("hora_inicial");
                                                                     }
 
                                                                 }
@@ -145,6 +155,7 @@ public class detalles_cita extends AppCompatActivity {
                                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                                     if (documentSnapshot.getString("estado")!=""){
                                                                         hr6.setVisibility(View.VISIBLE);
+                                                                        hora6= documentSnapshot.getString("hora_inicial");
                                                                     }
 
                                                                 }
@@ -155,13 +166,11 @@ public class detalles_cita extends AppCompatActivity {
                                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                                     if (documentSnapshot.getString("estado")!=""){
                                                                         hr7.setVisibility(View.VISIBLE);
+                                                                        hora7= documentSnapshot.getString("hora_inicial");
                                                                     }
 
                                                                 }
                                                             });
-                                                            //AGENDAR
-
-
 
 
                                                         }else{
@@ -171,6 +180,68 @@ public class detalles_cita extends AppCompatActivity {
                                                     }else{
                                                         Log.e("Error->Firebase", String.valueOf(task.getException()));
                                                     }
+                                                    agendar.setOnClickListener(new View.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(View v) {
+                                                            if (hr1.isChecked()){
+                                                                Intent intent = new Intent(detalles_cita.this, infocita.class);
+                                                                intent.putExtra("nombres",nombre);
+                                                                intent.putExtra("apellido",ape);
+                                                                intent.putExtra("fecha",fecha1);
+                                                                intent.putExtra("hora",hora1);
+                                                                startActivity(intent);
+                                                            }
+                                                            if (hr2.isChecked()){
+                                                                Intent intent = new Intent(detalles_cita.this, infocita.class);
+                                                                intent.putExtra("nombres",nombre);
+                                                                intent.putExtra("apellido",ape);
+                                                                intent.putExtra("fecha",fecha1);
+                                                                intent.putExtra("hora",hora2);
+                                                                startActivity(intent);
+                                                            }
+                                                            if (hr3.isChecked()){
+                                                                Intent intent = new Intent(detalles_cita.this, infocita.class);
+                                                                intent.putExtra("nombres",nombre);
+                                                                intent.putExtra("apellido",ape);
+                                                                intent.putExtra("fecha",fecha1);
+                                                                intent.putExtra("hora",hora3);
+                                                                startActivity(intent);
+                                                            }
+                                                            if (hr4.isChecked()){
+                                                                Intent intent = new Intent(detalles_cita.this, infocita.class);
+                                                                intent.putExtra("nombres",nombre);
+                                                                intent.putExtra("apellido",ape);
+                                                                intent.putExtra("fecha",fecha1);
+                                                                intent.putExtra("hora",hora4);
+                                                                startActivity(intent);
+                                                            }
+                                                            if (hr5.isChecked()){
+                                                                Intent intent = new Intent(detalles_cita.this, infocita.class);
+                                                                intent.putExtra("nombres",nombre);
+                                                                intent.putExtra("apellido",ape);
+                                                                intent.putExtra("fecha",fecha1);
+                                                                intent.putExtra("hora",hora5);
+                                                                startActivity(intent);
+                                                            }
+                                                            if (hr6.isChecked()){
+                                                                Intent intent = new Intent(detalles_cita.this, infocita.class);
+                                                                intent.putExtra("nombres",nombre);
+                                                                intent.putExtra("apellido",ape);
+                                                                intent.putExtra("fecha",fecha1);
+                                                                intent.putExtra("hora",hora6);
+                                                                startActivity(intent);
+                                                            }
+                                                            if (hr7.isChecked()){
+                                                                Intent intent = new Intent(detalles_cita.this, infocita.class);
+                                                                intent.putExtra("nombres",nombre);
+                                                                intent.putExtra("apellido",ape);
+                                                                intent.putExtra("fecha",fecha1);
+                                                                intent.putExtra("hora",hora7);
+                                                                startActivity(intent);
+                                                            }
+                                                        }
+                                                    });
+
                                                 }
                                             }).addOnFailureListener(new OnFailureListener() {
                                                 @Override
