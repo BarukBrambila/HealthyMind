@@ -35,7 +35,7 @@ public class listapsicologos_cita extends AppCompatActivity  {
     private FirebaseFirestore mFirestore;
 
     //private String[] buttonsLabels = {"image_button1", "image_button2", "image_button3"};
-   // private String[] getButtonsLabels = {"button1", "button2", "button3"};
+    //private String[] getButtonsLabels = {"button1", "button2", "button3"};
     //private String[] getGetButtonsLabels = {"button1a", "button2a", "button3a"};
 
     @Override

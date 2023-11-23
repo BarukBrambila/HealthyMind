@@ -39,6 +39,15 @@ public class perfilespecialista extends AppCompatActivity {
         espe = (TextView)findViewById(R.id.Especialidad);
         img=(CircleImageView) findViewById(R.id.image_perfil);
         agenda=(Button)findViewById(R.id.veragenda);
+        Button back = (Button) findViewById(R.id.button_back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         Toast.makeText(perfilespecialista.this, ""+id, Toast.LENGTH_LONG).show();
