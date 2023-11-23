@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import org.w3c.dom.Text;
+
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,10 +43,8 @@ public class detalles_cita extends AppCompatActivity {
     String hora1, hora2, hora3, hora4, hora5, hora6, hora7;
     CheckBox hr1, hr2, hr3, hr4, hr5, hr6, hr7;
 
-    Button confirmar, agendar, button_back1;
+    Button confirmar, agendar;
     final Calendar myCalendar = Calendar.getInstance();
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,6 @@ public class detalles_cita extends AppCompatActivity {
         setContentView(R.layout.activity_detalles_cita);
         calendario =(DatePicker) findViewById(R.id.calendario);
         nom= (TextView)findViewById(R.id.text_title2);
-        button_back1 = (Button)findViewById(R.id.button_back1);
         especialidad=(TextView)findViewById(R.id.txtespe);
         img =(CircleImageView)findViewById(R.id.image_perfil);
         confirmar=(Button)findViewById(R.id.confirmarbtn);
@@ -94,16 +94,6 @@ public class detalles_cita extends AppCompatActivity {
                                             String año = String.valueOf(calendario.getYear());
                                             fecha = dayOfMonth + mes + año;
                                             fecha1 = dayOfMonth +"/"+ mes + "/" + año;
-
-                                            button_back1.setOnClickListener(new View.OnClickListener() {  ////////////////////
-                                                @Override
-                                                public void onClick(View v) {
-                                                    Intent button_back0 = new Intent(detalles_cita.this, perfilespecialista.class);
-                                                    startActivity(button_back0);
-                                                }
-                                            });
-
-
                                             db.collection("users-especialista/" + curp + "/agenda").document(fecha).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -391,5 +381,4 @@ public class detalles_cita extends AppCompatActivity {
 
 
     }
-
 }
