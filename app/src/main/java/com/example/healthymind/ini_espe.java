@@ -42,8 +42,7 @@ public class ini_espe extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Activity_CreatePost.class);
-                    startActivity(i);
-                finish();
+                startActivity(i);
             }
         });
 
