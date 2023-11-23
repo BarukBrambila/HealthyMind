@@ -91,7 +91,7 @@ public class perfil_espe1 extends AppCompatActivity {
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
-                case R.id.bottom_notis:
+                case R.id.bottom_perfil:
                     return true;
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), ini_espe.class));
@@ -100,11 +100,6 @@ public class perfil_espe1 extends AppCompatActivity {
                     return true;
                 case R.id.bottom_date:
                     startActivity(new Intent(getApplicationContext(), citasespecialista.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
-                case R.id.bottom_perfil:
-                    startActivity(new Intent(getApplicationContext(), notificaciones.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;

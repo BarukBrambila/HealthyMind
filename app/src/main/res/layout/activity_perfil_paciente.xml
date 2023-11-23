@@ -7,14 +7,16 @@
     android:background="@color/blue2"
     tools:context=".perfil_paciente">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgperfil1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_weight="1"
-        android:background="@drawable/cliente" />
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:src="@drawable/img_3"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="4dp"
+        tools:ignore="MissingClass" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +24,7 @@
         android:id="@+id/txtnom"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imageView"
+        android:layout_below="@id/imgperfil1"
         android:text="Jose Torres"
         android:textSize="25dp"
         android:fontFamily="@font/fontbold"
@@ -65,18 +67,6 @@
                 android:gravity="start|center"
                 android:paddingHorizontal="85dp"
                 android:text="Editar Perfil"
-                android:textColor="@color/black" />
-            <Button
-                android:id="@+id/botton4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/text_border"
-                android:drawableStart="@drawable/metodo_pago"
-                android:drawablePadding="15dp"
-                android:gravity="start|center"
-                android:paddingHorizontal="85dp"
-                android:text="metodo de pago"
                 android:textColor="@color/black" />
             <Button
                 android:id="@+id/TyC"
