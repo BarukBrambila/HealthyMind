@@ -11,15 +11,17 @@
         android:id="@+id/desing_fondo"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:background="@color/blue2"/>
+        android:background="@drawable/rectangle_4"/>
 
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/button_back1"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/fecha"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"/>
+
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_perfil"
