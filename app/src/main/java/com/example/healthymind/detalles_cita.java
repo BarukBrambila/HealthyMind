@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -180,15 +181,111 @@ public class detalles_cita extends AppCompatActivity {
                                                     }else{
                                                         Log.e("Error->Firebase", String.valueOf(task.getException()));
                                                     }
+                                                    hr1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                        @Override
+                                                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                            if (isChecked){
+                                                                hr2.setEnabled(false);
+                                                                hr3.setEnabled(false);
+                                                                hr4.setEnabled(false);
+                                                                hr5.setEnabled(false);
+                                                                hr6.setEnabled(false);
+                                                                hr7.setEnabled(false);
+                                                            }
+                                                        }
+                                                    });
+                                                    hr2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                        @Override
+                                                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                            if (isChecked){
+                                                                hr1.setEnabled(false);
+                                                                hr3.setEnabled(false);
+                                                                hr4.setEnabled(false);
+                                                                hr5.setEnabled(false);
+                                                                hr6.setEnabled(false);
+                                                                hr7.setEnabled(false);
+                                                            }
+                                                        }
+                                                    });
+                                                    hr3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                        @Override
+                                                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                            if (isChecked){
+                                                                hr1.setEnabled(false);
+                                                                hr2.setEnabled(false);
+                                                                hr4.setEnabled(false);
+                                                                hr5.setEnabled(false);
+                                                                hr6.setEnabled(false);
+                                                                hr7.setEnabled(false);
+                                                            }
+                                                        }
+                                                    });
+                                                    hr4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                        @Override
+                                                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                            if (isChecked){
+                                                                hr1.setEnabled(false);
+                                                                hr2.setEnabled(false);
+                                                                hr3.setEnabled(false);
+                                                                hr5.setEnabled(false);
+                                                                hr6.setEnabled(false);
+                                                                hr7.setEnabled(false);
+                                                            }
+                                                        }
+                                                    });
+                                                    hr5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                        @Override
+                                                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                            if (isChecked){
+                                                                hr1.setEnabled(false);
+                                                                hr2.setEnabled(false);
+                                                                hr3.setEnabled(false);
+                                                                hr4.setEnabled(false);
+                                                                hr6.setEnabled(false);
+                                                                hr7.setEnabled(false);
+                                                            }
+                                                        }
+                                                    });
+                                                    hr6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                        @Override
+                                                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                            if (isChecked){
+                                                                hr1.setEnabled(false);
+                                                                hr2.setEnabled(false);
+                                                                hr3.setEnabled(false);
+                                                                hr4.setEnabled(false);
+                                                                hr5.setEnabled(false);
+                                                                hr7.setEnabled(false);
+                                                            }
+                                                        }
+                                                    });
+                                                    hr7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                                        @Override
+                                                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                            if (isChecked){
+                                                                hr1.setEnabled(false);
+                                                                hr2.setEnabled(false);
+                                                                hr3.setEnabled(false);
+                                                                hr4.setEnabled(false);
+                                                                hr5.setEnabled(false);
+                                                                hr6.setEnabled(false);
+                                                            }
+                                                        }
+                                                    });
                                                     agendar.setOnClickListener(new View.OnClickListener() {
                                                         @Override
                                                         public void onClick(View v) {
+
+
                                                             if (hr1.isChecked()){
                                                                 Intent intent = new Intent(detalles_cita.this, infocita.class);
                                                                 intent.putExtra("nombres",nombre);
                                                                 intent.putExtra("apellido",ape);
                                                                 intent.putExtra("fecha",fecha1);
                                                                 intent.putExtra("hora",hora1);
+                                                                intent.putExtra("id",id);
+                                                                intent.putExtra("curp_espe",curp);
+                                                                intent.putExtra("date",fecha);
                                                                 startActivity(intent);
                                                             }
                                                             if (hr2.isChecked()){
@@ -197,6 +294,9 @@ public class detalles_cita extends AppCompatActivity {
                                                                 intent.putExtra("apellido",ape);
                                                                 intent.putExtra("fecha",fecha1);
                                                                 intent.putExtra("hora",hora2);
+                                                                intent.putExtra("id",id);
+                                                                intent.putExtra("curp_espe",curp);
+                                                                intent.putExtra("date",fecha);
                                                                 startActivity(intent);
                                                             }
                                                             if (hr3.isChecked()){
@@ -205,6 +305,9 @@ public class detalles_cita extends AppCompatActivity {
                                                                 intent.putExtra("apellido",ape);
                                                                 intent.putExtra("fecha",fecha1);
                                                                 intent.putExtra("hora",hora3);
+                                                                intent.putExtra("id",id);
+                                                                intent.putExtra("curp_espe",curp);
+                                                                intent.putExtra("date",fecha);
                                                                 startActivity(intent);
                                                             }
                                                             if (hr4.isChecked()){
@@ -213,6 +316,9 @@ public class detalles_cita extends AppCompatActivity {
                                                                 intent.putExtra("apellido",ape);
                                                                 intent.putExtra("fecha",fecha1);
                                                                 intent.putExtra("hora",hora4);
+                                                                intent.putExtra("id",id);
+                                                                intent.putExtra("curp_espe",curp);
+                                                                intent.putExtra("date",fecha);
                                                                 startActivity(intent);
                                                             }
                                                             if (hr5.isChecked()){
@@ -221,6 +327,9 @@ public class detalles_cita extends AppCompatActivity {
                                                                 intent.putExtra("apellido",ape);
                                                                 intent.putExtra("fecha",fecha1);
                                                                 intent.putExtra("hora",hora5);
+                                                                intent.putExtra("id",id);
+                                                                intent.putExtra("curp_espe",curp);
+                                                                intent.putExtra("date",fecha);
                                                                 startActivity(intent);
                                                             }
                                                             if (hr6.isChecked()){
@@ -229,14 +338,22 @@ public class detalles_cita extends AppCompatActivity {
                                                                 intent.putExtra("apellido",ape);
                                                                 intent.putExtra("fecha",fecha1);
                                                                 intent.putExtra("hora",hora6);
+                                                                intent.putExtra("id",id);
+                                                                intent.putExtra("curp_espe",curp);
+                                                                intent.putExtra("date",fecha);
                                                                 startActivity(intent);
                                                             }
                                                             if (hr7.isChecked()){
+                                                                Map<String, Object> map = new HashMap<>();
+                                                                map.put("estado","");
                                                                 Intent intent = new Intent(detalles_cita.this, infocita.class);
                                                                 intent.putExtra("nombres",nombre);
                                                                 intent.putExtra("apellido",ape);
                                                                 intent.putExtra("fecha",fecha1);
                                                                 intent.putExtra("hora",hora7);
+                                                                intent.putExtra("id",id);
+                                                                intent.putExtra("curp_espe",curp);
+                                                                intent.putExtra("date",fecha);
                                                                 startActivity(intent);
                                                             }
                                                         }

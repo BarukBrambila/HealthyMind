@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/desing_fondo"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="250dp"
         android:background="@drawable/rectangle_4"/>
 
     <Button
@@ -23,14 +23,15 @@
         android:layout_height="wrap_content"
         android:text="Detalles de tu cita:"
         android:textColor="@color/white"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:layout_marginLeft="20dp"
         android:textSize="28dp"
         android:fontFamily="@font/fontbold"/>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="250dp"
+        android:id="@+id/r1"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/desing_fondo">
         <TextView
             android:layout_width="match_parent"
@@ -94,39 +95,36 @@
             android:fontFamily="@font/fontregular"
             android:textSize="20dp"
             android:textColor="@color/black" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txt4"
-            android:layout_below="@id/texthr"
-            android:text="Costo:"
-            android:layout_marginTop="50dp"
-            android:textSize="20dp"
-            android:textColor="@color/blue2"
-            android:fontFamily="@font/fontbold"
-            android:layout_marginLeft="20dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="$300MXM"
-            android:id="@+id/textcosto"
-            android:layout_below="@id/txt4"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:fontFamily="@font/fontregular"
-            android:textSize="20dp"
-            android:textColor="@color/black" />
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Ir a pagar"
-            android:id="@+id/btnpagar"
-            android:layout_below="@id/textcosto"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:backgroundTint="@color/blue2"
-            android:textColor="@color/white"
-            android:layout_marginLeft="100dp"/>
 
     </RelativeLayout>
+    <TextView
+        android:id="@+id/desing1"
+        android:layout_below="@id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/rectangle_7"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$300MXM"
+        android:id="@+id/textcosto"
+        android:layout_below="@id/r1"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/fontbold"
+        android:textSize="24dp"
+        android:textColor="@color/white" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnpagar"
+        android:layout_below="@id/r1"
+        android:layout_alignEnd="@id/textcosto"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_login_bienvenida"
+        android:text="Pagar"
+        android:textColor="@color/blue2"
+        android:fontFamily="@font/fontbold"/>
+
 </RelativeLayout>

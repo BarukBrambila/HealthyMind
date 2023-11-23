@@ -18,6 +18,12 @@
         android:theme="@style/Theme.HealthyMind"
         tools:targetApi="31">
         <activity
+            android:name=".pago_exitoso"
+            android:exported="false" />
+        <activity
+            android:name=".pago"
+            android:exported="false" />
+        <activity
             android:name=".infocita"
             android:exported="false" />
         <activity
