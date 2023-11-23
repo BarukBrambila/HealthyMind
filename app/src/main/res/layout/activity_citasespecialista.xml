@@ -42,7 +42,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/fontbold"
-                android:text="Citas programadas:"
+                android:text="Citas programadas"
                 android:textAlignment="center"
                 android:textColor="#105FD4"
                 android:textSize="20dp" />

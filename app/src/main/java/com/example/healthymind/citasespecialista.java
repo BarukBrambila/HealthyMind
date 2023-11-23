@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,12 +20,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class citasespecialista extends AppCompatActivity {
@@ -32,6 +37,8 @@ public class citasespecialista extends AppCompatActivity {
     String fecha;
     CheckBox hr1, hr2, hr3, hr4, hr5, hr6, hr7;
     FirebaseFirestore mFirestore;
+    ListView Listacitas;
+    ArrayList<citasModel> dataModalArrayList;
 
     final Calendar myCalendar = Calendar.getInstance();
 
@@ -44,6 +51,7 @@ public class citasespecialista extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.bottom_date);
         calendario = (DatePicker) findViewById(R.id.calendario);
         confirmar = (Button) findViewById(R.id.btnconfirmar);
+        Listacitas = (ListView) findViewById(R.id.listacitas);
         hr1=(CheckBox)findViewById(R.id.hr1);
         hr2=(CheckBox)findViewById(R.id.hr2);
         hr3=(CheckBox)findViewById(R.id.hr3);
@@ -54,6 +62,53 @@ public class citasespecialista extends AppCompatActivity {
         calendario.setMinDate(System.currentTimeMillis() - 1000);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        String email = user.getEmail();
+        db.collection("users-especialista")
+                .whereEqualTo("email", email)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                           @Override
+                                           public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                               if (task.isSuccessful()) {
+                                                   FirebaseFirestore db = FirebaseFirestore.getInstance();
+                                                   for (QueryDocumentSnapshot document : task.getResult()) {
+                                                       String id = document.getString("rfc");
+                                                       String d = String.valueOf(calendario.getDayOfMonth()-1);
+                                                       String m = String.valueOf(calendario.getMonth()+1);
+                                                       String a = String.valueOf(calendario.getYear());
+                                                       String fechaActual = d +"/"+ m +"/" +a;
+                                                       Log.d("citas->", ""+fechaActual);
+                                                       db.collection("transacciones").whereEqualTo("rfc_especialista", id).whereEqualTo("fecha_cita", fechaActual).get()
+                                                               .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                                                   @Override
+                                                                   public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                                                       dataModalArrayList = new ArrayList<>();
+                                                                       if (!queryDocumentSnapshots.isEmpty()) {
+                                                                           java.util.List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                                                                           for (DocumentSnapshot d : list) {
+                                                                               citasModel dataModal = d.toObject(citasModel.class);
+                                                                               dataModalArrayList.add(dataModal);
+                                                                           }
+                                                                           citasAdapter adapter = new citasAdapter(citasespecialista.this, dataModalArrayList);
+
+                                                                           Listacitas.setAdapter(adapter);
+
+
+                                                                       } else {
+
+                                                                           Toast.makeText(citasespecialista.this, "No hay citas.", Toast.LENGTH_SHORT).show();
+                                                                       }
+
+                                                                   }
+
+                                                               });
+                                                   }
+
+                                               }
+                                           }
+                                       });
+
         confirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
