@@ -24,6 +24,9 @@
             android:name=".pago"
             android:exported="false" />
         <activity
+            android:name=".PostActivity"
+            android:exported="false" />
+        <activity
             android:name=".infocita"
             android:exported="false" />
         <activity
