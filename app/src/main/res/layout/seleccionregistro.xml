@@ -54,8 +54,8 @@
         android:id="@+id/buttonpaciente"
         android:layout_below="@+id/sub1"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue"
-        android:drawableBottom="@drawable/baseline_person_24"
+        android:background="@drawable/bottom_background"
+        android:drawableBottom="@drawable/paciente"
         android:textColor="@color/black"
         android:layout_marginHorizontal="60dp"/>
 
@@ -67,6 +67,6 @@
         android:layout_alignLeft="@id/buttonpaciente"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue"
-        android:drawableBottom="@drawable/baseline_design_services_24" />
+        android:background="@drawable/bottom_background"
+        android:drawableBottom="@drawable/psico" />
 </RelativeLayout>

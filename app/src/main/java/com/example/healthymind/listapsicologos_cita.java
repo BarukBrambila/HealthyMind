@@ -35,7 +35,7 @@ public class listapsicologos_cita extends AppCompatActivity  {
     private FirebaseFirestore mFirestore;
 
     //private String[] buttonsLabels = {"image_button1", "image_button2", "image_button3"};
-   // private String[] getButtonsLabels = {"button1", "button2", "button3"};
+    //private String[] getButtonsLabels = {"button1", "button2", "button3"};
     //private String[] getGetButtonsLabels = {"button1a", "button2a", "button3a"};
 
     @Override
@@ -79,11 +79,6 @@ public class listapsicologos_cita extends AppCompatActivity  {
                     return true;
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), ini_paciente.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
-                case R.id.bottom_notis:
-                    startActivity(new Intent(getApplicationContext(), notificaciones_paciente.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;

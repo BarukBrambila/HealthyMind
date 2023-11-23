@@ -39,6 +39,15 @@ public class perfilespecialista extends AppCompatActivity {
         espe = (TextView)findViewById(R.id.Especialidad);
         img=(CircleImageView) findViewById(R.id.image_perfil);
         agenda=(Button)findViewById(R.id.veragenda);
+        Button back = (Button) findViewById(R.id.button_back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         Toast.makeText(perfilespecialista.this, ""+id, Toast.LENGTH_LONG).show();
@@ -73,35 +82,5 @@ public class perfilespecialista extends AppCompatActivity {
             });
         }
 
-
-
-
-
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationview);
-        bottomNavigationView.setSelectedItemId(R.id.bottom_date);
-
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()){
-                case R.id.bottom_perfil:
-                    return true;
-                case R.id.bottom_home:
-                    startActivity(new Intent(getApplicationContext(), ini_espe.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
-                case R.id.bottom_notis:
-                    startActivity(new Intent(getApplicationContext(), notificaciones.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
-                case R.id.bottom_date:
-                    startActivity(new Intent(getApplicationContext(), citasespecialista.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
-            }
-            return false;
-        });
     }
 }

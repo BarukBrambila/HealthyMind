@@ -35,6 +35,21 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:padding="16dp">
+            <TextView
+                android:id="@+id/citastxt"
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/fontbold"
+                android:text="Citas programadas:"
+                android:textAlignment="center"
+                android:textColor="#105FD4"
+                android:textSize="20dp" />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listacitas"/>
 
             <TextView
                 android:id="@+id/habilidardiastxt"
@@ -46,7 +61,7 @@
                 android:text="Habilita los dias disponibles"
                 android:textAlignment="center"
                 android:textColor="#105FD4"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <DatePicker
                 android:id="@+id/calendario"
