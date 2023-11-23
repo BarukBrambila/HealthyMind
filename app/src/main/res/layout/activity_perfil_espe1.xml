@@ -84,7 +84,7 @@
                 android:text="metodo de pago"
                 android:textColor="@color/black" />
             <Button
-                android:id="@+id/botton5"
+                android:id="@+id/TYC2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
