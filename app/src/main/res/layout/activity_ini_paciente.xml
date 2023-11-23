@@ -35,9 +35,15 @@
 
             <TextView
                 android:layout_width="375dp"
-                android:layout_height="match_parent"
-                android:text="LISTA PUBLICACIONES PACIENTE"
+                android:layout_height="wrap_content"
+                android:text="PUBLICACIONES"
                 android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
         </LinearLayout>
     </ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView

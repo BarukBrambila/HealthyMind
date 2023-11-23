@@ -26,7 +26,7 @@
         android:textSize="25dp"/>
 
     <Button
-        android:id="@+id/agregar_publi"
+        android:id="@+id/btnCreatePost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_title"
@@ -42,6 +42,24 @@
         android:layout_marginTop="50dp"
         android:layout_below="@id/card1">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="375dp"
+                android:layout_height="wrap_content"
+                android:text="PUBLICACIONES"
+                android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
 
 
     </ScrollView>
