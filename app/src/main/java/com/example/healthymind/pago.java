@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,7 +68,8 @@ public class pago extends AppCompatActivity {
                                    @Override
                                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                        // Toast.makeText(pago.this, ""+email, Toast.LENGTH_LONG).show();
-
+                                       FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                       String email = user.getEmail();
                                        if (task.isSuccessful()) {
                                            for (QueryDocumentSnapshot document : task.getResult()) {
                                                String curp = document.getId();
@@ -76,6 +78,24 @@ public class pago extends AppCompatActivity {
                                                map.put("fecha_cita", fech);
                                                map.put("hr_cita", hr);
                                                map.put("id_paciente", curp);
+
+                                               Map<String, Object> mailData = new HashMap<>();
+                                               mailData.put("to", email);
+                                               Map<String, Object> messageData = new HashMap<>();
+                                               messageData.put("subject", "Cita agendada con exito.");
+                                               messageData.put("text", "link.");
+                                               messageData.put("html", "Informacion de la sesion: Para unirte a la videollamada, haz clic en este enlace: https://meet.google.com/aqt-mduz-nwc\n" +
+                                                       "Si quieres unirte por teléfono, llama al +1 669-241-0197 e introduce este PIN: 279 179 197#");
+                                               mailData.put("message", messageData);
+                                               db.collection("mail")
+                                                       .add(mailData)
+                                                       .addOnSuccessListener(documentReference -> {
+                                                           Log.d("correo", "OK");
+                                                       })
+                                                       .addOnFailureListener(e -> {
+                                                           Log.d("Error email: ",  e.getMessage());
+                                                       });
+
                                                pagar(map, curp);
                                                Intent intent = new Intent(pago.this, pago_exitoso.class);
                                                startActivity(intent);
