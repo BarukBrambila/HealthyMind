@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue3"
-    tools:context=".seleccioninisesion">
-
+    android:background="@color/blue2"
+    tools:context=".seleccioniniciarsesion">
     <ImageView
         android:id="@+id/toplogo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/logo" />
+        android:background="@drawable/logonewsinfondo" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toplogo"
+        android:layout_marginTop="80dp"
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="367dp"
+            android:layout_row="0"
+            android:layout_column="0"
             android:layout_marginHorizontal="26dp"
             android:layout_marginVertical="10dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="40dp" />
-
-
     </GridLayout>
 
     <TextView
@@ -42,32 +42,32 @@
         android:textAlignment="center"
         android:textSize="28dp"
         android:layout_below="@id/toplogo"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="140dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="135dp"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
         android:id="@+id/buttonpaciente"
         android:layout_below="@+id/sub1"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue"
-        android:drawableBottom="@drawable/baseline_person_24"
+        android:background="@drawable/bottom_background"
+        android:drawableBottom="@drawable/paciente"
         android:textColor="@color/black"
         android:layout_marginHorizontal="60dp"/>
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="135dp"
+        android:layout_width="143dp"
+        android:layout_height="143dp"
         android:id="@+id/buttonesp"
         android:layout_below="@+id/sub1"
         android:layout_alignLeft="@id/buttonpaciente"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/blue"
-        android:drawableBottom="@drawable/baseline_design_services_24" />
+        android:background="@drawable/bottom_background"
+        android:drawableBottom="@drawable/psico" />
 
 </RelativeLayout>

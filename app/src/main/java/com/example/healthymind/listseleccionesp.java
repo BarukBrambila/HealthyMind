@@ -1,0 +1,59 @@
+package com.example.healthymind;
+
+public class listseleccionesp {
+    public String nombres;
+    public String especialidad;
+    public String preio;
+    public String foto;
+    public String rfc;
+
+    public listseleccionesp(String nombres, String especialidad, String preio, String foto, String rfc) {
+        this.nombres = nombres;
+        this.especialidad = especialidad;
+        this.preio = preio;
+        this.foto = foto;
+        this.rfc = rfc;
+    }
+    public listseleccionesp(){
+
+    }
+    public String getNombre() {
+        return nombres;
+    }
+
+    public void setNombre(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public String getPreio() {
+        return preio;
+    }
+
+    public void setPreio(String preio) {
+        this.preio = preio;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getRfc() {
+        return rfc;
+    }
+
+    public void setRfc(String rfc) {
+        this.rfc = rfc;
+    }
+}

@@ -6,7 +6,7 @@
 
 
     <ImageView
-        android:id="@+id/arrowImage"
+        android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -21,11 +21,11 @@
         android:layout_width="157dp"
         android:layout_height="178dp"
         android:layout_marginLeft="120dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logonewsinfondo" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="561dp"
+        android:layout_height="match_parent"
         android:layout_below="@id/logoImageView"
         android:layout_marginStart="0dp"
         android:layout_marginTop="20dp"
@@ -34,7 +34,6 @@
         android:background="@drawable/rounded_background"
         android:orientation="vertical"
         android:padding="16dp">
-
 
         <TextView
             android:id="@+id/crear_publi"
@@ -48,29 +47,29 @@
             android:textSize="25dp" />
 
         <EditText
-            android:id="@+id/rectangle_2"
+            android:id="@+id/tituloET"
             android:layout_width="314dp"
             android:layout_height="59dp"
             android:layout_marginLeft="34dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rectangle_2"
-            android:elevation="50dp"
+            android:background="@drawable/text_border"
+            android:fontFamily="@font/fontregular"
             android:hint="Titulo de la publicación"
-            android:paddingHorizontal="60dp" />
+            android:paddingHorizontal="50dp" />
 
         <EditText
-            android:id="@+id/rectangle_3"
+            android:id="@+id/textoET"
             android:layout_width="314dp"
             android:layout_height="230dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="25dp"
-            android:background="@drawable/rectangle_2"
-            android:elevation="50dp"
-            android:hint="Escribe algo aqui"
-            android:paddingHorizontal="85dp" />
+            android:background="@drawable/text_border"
+            android:fontFamily="@font/fontregular"
+            android:hint="Escribe algo aqui...."
+            android:paddingHorizontal="67dp" />
 
-        <Button
-            android:id="@+id/botton1"
+        <!--<Button
+            android:id="@+id/btnUpImg"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginLeft="95dp"
@@ -82,10 +81,10 @@
             android:paddingHorizontal="20dp"
             android:text="Subir Foto"
             android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:textColor="@color/white" />-->
 
         <Button
-            android:id="@+id/botton"
+            android:id="@+id/btnenviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="95dp"

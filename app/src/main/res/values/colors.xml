@@ -5,6 +5,7 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="cian">#00FCFC</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 ////*
@@ -12,6 +13,11 @@
     <color name="blue2">#004AAD</color>
     <color name="blue3">#105FD4</color>
     <color name="gris">#B5B5B5</color>
+    <color name="blue4">#000080</color>
+    <color name="blue5">#252850</color>
+    <color name="blue6">#0D33B3</color>
+    <color name="gris2">#F9F9F9</color>
+    <color name="transparente">#00000000</color>
 
     *///////////
 </resources>

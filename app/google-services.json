@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "596369488817",
+    "project_id": "healthymind-f2fcb",
+    "storage_bucket": "healthymind-f2fcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596369488817:android:cea2f71a70907712c21b90",
+        "android_client_info": {
+          "package_name": "com.example.healthymind"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc8R68pFmZKG5BcFLAa4bTWAPmnEzHFNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

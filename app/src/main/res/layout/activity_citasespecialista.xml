@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue2"
+    tools:context=".citasespecialista">
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logonewsinfondo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/logoImageView"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_background"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="665dp"
+        android:layout_below="@id/logoImageView"
+        android:layout_marginTop="11dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/citastxt"
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/fontbold"
+                android:text="Citas programadas"
+                android:textAlignment="center"
+                android:textColor="#105FD4"
+                android:textSize="20dp" />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listacitas"/>
+
+            <TextView
+                android:id="@+id/habilidardiastxt"
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/fontbold"
+                android:text="Habilita los dias disponibles"
+                android:textAlignment="center"
+                android:textColor="#105FD4"
+                android:textSize="20dp" />
+
+            <DatePicker
+                android:id="@+id/calendario"
+                android:layout_width="314dp"
+                android:layout_height="404dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/habilidarhrtxt"
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/fontbold"
+                android:text="Habilita los horarios disponibles"
+                android:textAlignment="center"
+                android:textColor="#105FD4"
+                android:textSize="25dp" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:columnCount="3">
+
+                <CheckBox
+                    android:id="@+id/hr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="9:00am" />
+
+                <CheckBox
+                    android:id="@+id/hr2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="10:00am" />
+
+                <CheckBox
+                    android:id="@+id/hr3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="11:00am" />
+
+                <CheckBox
+                    android:id="@+id/hr4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="4:00pm" />
+
+                <CheckBox
+                    android:id="@+id/hr5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="5:00pm" />
+
+                <CheckBox
+                    android:id="@+id/hr6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="6:00pmm" />
+
+                <CheckBox
+                    android:id="@+id/hr7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="7:00pm" />
+            </GridLayout>
+
+            <Button
+                android:id="@+id/btnconfirmar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_1"
+                android:text="Confirmar"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationview"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_background"
+        android:layout_marginEnd="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:elevation="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/gris"
+        app:itemRippleColor="@color/white"
+        app:labelVisibilityMode="unlabeled"/>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue2"
+    tools:context=".perfil_espe1">
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:civ_border_width="4dp"
+        android:id="@+id/imageView"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img_3"
+        app:civ_border_color="@color/blue2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:ignore="MissingClass" />
+
+    <TextView
+        android:id="@+id/txtnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView"
+        android:text="Jose Torres"
+        android:textSize="25dp"
+        android:fontFamily="@font/fontbold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtemail"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtnombre"
+        android:text="Jose_torres@gmail.com"
+        android:textSize="15dp"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtemail"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_background"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="507dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="76dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btneditar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/editar"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="Editar Perfil"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/botton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/metodo_pago"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="metodo de pago"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/TYC2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/terminos_condiciones"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="Terminos y condiciones"
+                android:textColor="@color/black" />
+            <Button
+                android:id="@+id/cerrarsesionbtn_espe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text_border"
+                android:drawableStart="@drawable/salir"
+                android:drawablePadding="15dp"
+                android:gravity="start|center"
+                android:paddingHorizontal="85dp"
+                android:text="cerrar sesion"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationview"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_background"
+        android:layout_marginEnd="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:elevation="0dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/gris"
+        app:itemRippleColor="@color/white"
+        app:labelVisibilityMode="unlabeled"/>
+
+</RelativeLayout>
