@@ -59,7 +59,7 @@
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="10dp"
                 android:layout_below="@id/postContainer"
-                android:src="@drawable/cieloejemlo"/>
+                android:src="@null"/>
         </RelativeLayout>
     </LinearLayout>
 
