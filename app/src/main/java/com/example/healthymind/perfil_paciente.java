@@ -63,6 +63,7 @@ public class perfil_paciente extends AppCompatActivity {
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
+                                    //String id = document.getId();
                                     String nombre = document.getString("nombres");
                                     String ape = document.getString("apellidos");
                                     nom.setText("" + nombre + " " + ape);
@@ -132,5 +133,63 @@ public class perfil_paciente extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == GALLERY_INTENT && resultCode == RESULT_OK){
+            Uri uri = data.getData();
+            StorageReference filepath = mStorage.child("fotos").child(uri.getLastPathSegment());
+            filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                                           @Override
+                                                           public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
+                                                               Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
+                                                               while (!uriTask.isSuccessful()) ;
+                                                               if (uriTask.isSuccessful()) {
+                                                                   uriTask.addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                       @Override
+                                                                       public void onSuccess(Uri uri) {
+                                                                           String url = uri.toString();
+                                                                           FirebaseFirestore db = FirebaseFirestore.getInstance();
+                                                                           FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                                                           if (user != null) {
+                                                                               String email = user.getEmail();
+                                                                               db.collection("users-paciente")
+                                                                                       .whereEqualTo("email", email)
+                                                                                       .get()
+                                                                                       .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                                                                           @Override
+                                                                                           public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                                                               if (task.isSuccessful()) {
+                                                                                                   for (QueryDocumentSnapshot document : task.getResult()) {
+                                                                                                       String id = document.getId();
+                                                                                                       DocumentReference fotoreference = db.collection("users-paciente").document(id);
+                                                                                                       fotoreference.update("foto", url).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                                           @Override
+                                                                                                           public void onSuccess(Void unused) {
+
+                                                                                                           }
+                                                                                                       });
+
+                                                                                                   }
+                                                                                               }
+
+
+                                                                                           }
+                                                                                       });
+
+                                                                           }
+                                                                       }
+                                                                   });
+
+                                                               }
+                                                           }
+                                                       });
+
+
+
+                   // Toast.makeText(perfil_paciente.this, "Archivo subido correctamente", Toast.LENGTH_LONG).show();
+            Glide.with(this).load(uri).into(img);
+        }
+    }
 }
