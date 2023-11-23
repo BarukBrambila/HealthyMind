@@ -259,6 +259,29 @@
                     android:background="@drawable/text_border"
                     android:inputType="textPassword" />
 
+
+                <Button
+                    android:id="@+id/terminos1"
+                    android:layout_width="294dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="40dp"
+                    android:text="Terminos condiciones"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12dp" />
+
+                <CheckBox
+                    android:id="@+id/terminos2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/confirmpassword"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/fontbold"
+                    android:gravity="center_vertical"
+                    android:text="Acepto los terminos y condiciones"
+                    android:textColor="@color/blue2"
+                    android:textSize="12sp" />
+
                 <Button
                     android:id="@+id/registerbtn"
                     android:layout_width="250dp"

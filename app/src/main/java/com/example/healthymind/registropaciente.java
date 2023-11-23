@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -33,7 +34,9 @@ public class registropaciente extends AppCompatActivity {
     FirebaseFirestore mFirestore;
     FirebaseAuth mAuth;
     EditText nombre, apellido, curp, fechanac, tel, email, pass, confirmpass;
-    Button registrar;
+    Button registrar ,terminos;
+
+    CheckBox accepto;
     Spinner genero;
     String[] opgenero={"Femenino", "Masculino", "Otro"};
     String generoact = "";
@@ -45,6 +48,7 @@ public class registropaciente extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
         registrar=(Button)findViewById(R.id.registerbtn);
+        accepto =(CheckBox)findViewById(R.id.terminos2);
         nombre = (EditText) findViewById(R.id.setnombre);
         apellido =(EditText) findViewById(R.id.setapellidos);
         curp=(EditText)findViewById(R.id.curp);
@@ -81,6 +85,19 @@ public class registropaciente extends AppCompatActivity {
             }
         });
 
+       terminos = findViewById(R.id.terminos1);
+
+        terminos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(registropaciente.this,pdfActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
 
 
         registrar.setOnClickListener(new View.OnClickListener() {
@@ -176,5 +193,6 @@ public class registropaciente extends AppCompatActivity {
         SimpleDateFormat dateFormat=new SimpleDateFormat(myFormat, Locale.US);
         fechanac.setText(dateFormat.format(myCalendar.getTime()));
     }
+
 
 }
