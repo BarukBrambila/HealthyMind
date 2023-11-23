@@ -216,11 +216,6 @@ public class citasespecialista extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
-                case R.id.bottom_notis:
-                    startActivity(new Intent(getApplicationContext(), notificaciones.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
                 case R.id.bottom_perfil:
                     startActivity(new Intent(getApplicationContext(), perfil_espe1.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

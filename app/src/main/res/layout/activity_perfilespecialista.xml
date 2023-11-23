@@ -98,58 +98,8 @@
                 android:textColor="@color/gris"
                 android:textSize="18sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="40dp"
-                android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/publicacionestxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/blue2"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:text="Publicaciones" />
-            </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/view_pub"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:paddingStart="35dp"
-                android:paddingEnd="30dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="40dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/metodosdepagotxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/blue2"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-                    android:text="Metodos de Pago" />
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:paddingStart="35dp"
-                android:paddingEnd="30dp" />
 
             <Button
                 android:id="@+id/veragenda"
@@ -176,22 +126,6 @@
         tools:ignore="MissingClass" />
 
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottomNavigationview"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_background"
-        android:layout_marginEnd="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:elevation="0dp"
-        app:menu="@menu/bottom_menu"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@color/gris"
-        app:itemRippleColor="@color/white"
-        app:labelVisibilityMode="unlabeled"/>
 
 
 </RelativeLayout>

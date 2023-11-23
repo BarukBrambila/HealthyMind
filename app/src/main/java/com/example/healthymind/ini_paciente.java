@@ -69,11 +69,6 @@ public class ini_paciente extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
-                case R.id.bottom_notis:
-                    startActivity(new Intent(getApplicationContext(), notificaciones_paciente.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
                 case R.id.bottom_perfil:
                     startActivity(new Intent(getApplicationContext(), perfil_paciente.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
